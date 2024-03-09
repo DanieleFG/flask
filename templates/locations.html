@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+{% block content %}
+    <h1>Listagem Location</h1>
+    <div class="row">
+        {% for location_unique in location %}             
+            <div class="col-sm-3 col-6"> 
+                <h3>{{ location_unique.name }}</h3>              
+                <h3>{{ location_unique.type }}</h3>              
+                <h3>{{ location_unique.dimension }}</h3> 
+                <a class="nav-link" href="{{ url_for('get_list_location', id=location_unique.id) }}"> ver localização </a>             
+            </div>
+           
+
+        {% endfor %}
+    </div>
+{% endblock %}

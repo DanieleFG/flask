@@ -1,0 +1,17 @@
+{% extends "layout.html" %} 
+{% block content %}
+    <h1>Listagem personagens</h1>
+    <div class="row">
+        <div class="col-sm-3 col-6">
+            <img src="{{ profile.image }}" alt="{{ profile.name }}" />
+        </div>
+        <div class="col-sm-3 col-6">
+            <h3>{{ profile.name }}</h3>
+            <p>Sexo: {{ profile.gender }}</p>
+            <p>Espécie: {{ profile.species }}</p>
+            <p>Localização: {{ profile.origin.name }}</p>
+            <p>Status: {{ profile.status }}</p>
+        </div>
+            
+    </div>
+{% endblock %}
